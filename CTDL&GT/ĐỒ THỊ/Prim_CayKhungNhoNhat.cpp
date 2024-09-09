@@ -31,15 +31,46 @@ void nhap()
         adj[x].push_back({y, w});
         adj[y].push_back({x, w});
     }
+    memset(taken, false, sizeof(taken)); 
 }
 
 void Prim(int s)
 {
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
-
+    taken[s] = true; // Nạp s vào trong cây khung
+    for (auto it : adj[s]) {
+        int t = it.first;
+        if (!taken[t]) {
+            Q.push({it.second, t});
+        }
+    }
+    // Lặp
+    long long d = 0; // Trọng số của cây khung nhỏ nhất
+    int dem = 0;
+    while(!Q.empty()) {
+        // Lấy ra cạnh ngắn nhất (ở đỉnh hàng đợi)
+        pair<int, int> e = Q.top(); Q.pop();
+        int u = e.second; // dinh
+        int w = e.first; // trong so
+        if (!taken[u]) {
+            ++dem;
+            d += w;
+            taken[u] = true;
+            for (auto it : adj[u]) {
+                if (!taken[it.first]) {
+                    Q.push({it.second, it.first});
+                }
+            }
+        }
+    }
+    if (dem == n - 1) {
+        cout << d << endl;
+    }
+    else cout << "DO THI KHONG LIEN THONG \n";
 }
 int main()
 {
-
+    nhap();
+    Prim(1);
     return 0;
 }

@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "28tech_fa143d95"
+    },
+    {
+      "type": "java",
+      "name": "HelloWorld",
+      "request": "launch",
+      "mainClass": "Java.HelloWorld",
+      "projectName": "28tech_fa143d95"
+    },
+    {
+      "type": "java",
+      "name": "Person",
+      "request": "launch",
+      "mainClass": "Person",
+      "projectName": "28tech_fa143d95"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/28tech/CTDL&GT/ĐỒ THỊ",
+      "program": "d:/28tech/CTDL&GT/ĐỒ THỊ/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

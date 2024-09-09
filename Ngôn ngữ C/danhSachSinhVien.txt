@@ -1,0 +1,3 @@
+			 Danh sach sinh vien 		
+STT	 Ho va ten	         Ma sinh vien	 Email	                         Gioi tinh	 Lop	         GPA	 Can nang    Chieu cao	  BMI
+1  	 Luong Van Vo          	 102230224	 102230224@sv1.dut.udn.vn      	 Nam       	 23T_DT1   	 3.90	 49.00	     170.00cm	  16.96

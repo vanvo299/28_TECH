@@ -1,0 +1,50 @@
+DP Note
+1.
+- Không tính hoán vị trùng nhau (123 = 132 = 321)
+- Được phép dùng a[i] nhiều lần
+// Coin 3
+for (int i = 1; i <= n; i++) {
+	for (int j = 1; j <= s; j++) {
+		// code 
+	}
+}
+for (int i = 1; i <= n; i++) {
+	for (int j = 1; j <= s; j++){
+		F[i][j] = {F[i][j - a[i]], F[i - 1][j]};
+	}
+}
+
+2.
+- Không tính hoán vị trùng nhau (123 = 132)
+- Không được phép dùng a[i] nhiều lần
+(Dãy con có tổng bằng S, Bài toán cái túi)
+
+VD: i = 2; j = 9
+F[9] = F[7] || F[9]
+
+for (int i = 1; i <= n; i++) {
+	for (int j = s; j >= 1; j--) {
+		//code
+		F[j] = F[j - a[i]] || F[j]
+ 	}
+}
+
+VD: i = 2, j = 9
+F[2][9] = F[1][7] || F[1][9]
+
+for (int i = 1; i <= n; i++) {
+	for (int j = 1; j <= s; j++) {
+		F[i][j] = {F[i - 1][j - a[i]], F[i - 1][j]};
+	}
+}
+
+
+3. 
+- Có tính hoán vị trùng nhau
+- Dùng a[i] nhiều lần
+// Bài fibo, cầu thang, coin 2
+for (int i = 1; i <= s; i++) {
+	for (int j = 1; j <= n; j++) {
+		// code
+	}
+}

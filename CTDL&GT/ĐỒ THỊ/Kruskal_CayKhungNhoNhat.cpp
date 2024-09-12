@@ -61,12 +61,14 @@ void nhap()
     }
 }
 
+bool cmp(edge a, edge b)
+{
+    return a.w < b.w;
+}
 void Kruskal()
 {
     // Bước 1: Sắp xếp ds cạnh theo trọng số tăng dần
-    sort(dscanh.begin(), dscanh.end(), [](edge a, edge b)->bool {
-        return a.w < b.w;
-    });
+    sort(dscanh.begin(), dscanh.end(), cmp);
     // Bước 2: Lặp
     int d = 0; // Tổng trọng số
     vector<edge> MST; // Lưu ds cạnh trong cây khung

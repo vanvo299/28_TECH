@@ -22,7 +22,7 @@ bool isOperator(char ch)
     return ch == '+' || ch == '-' || ch == '*' || ch == '/';
 }
 
-std::string TienTo_TrungTo()
+string TienTo_TrungTo()
 {
     for (int i = s.size() - 1; i >= 0; i--) {
         // if (s[i] >= '0' && s[i] <= '9' || s[i] >= 'a' && s[i] <= 'z' || s[i] >= 'A' && s[i] <= 'Z') {
@@ -33,8 +33,8 @@ std::string TienTo_TrungTo()
         if (isOperator(s[i])) {
             string s1 = st.top(); st.pop();
             string s2 = st.top(); st.pop();
-            string tmp = "(" + s1 + s[i] + s2 + ")";
-            st.push(tmp);
+            string res = "(" + s1 + s[i] + s2 + ")";
+            st.push(res);
         }
     }
     return st.top();
